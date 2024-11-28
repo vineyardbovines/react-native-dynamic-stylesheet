@@ -1,0 +1,30 @@
+name: pr open
+
+on:
+  pull_request:
+    types:
+      - opened
+      - ready_for_review
+      - synchronize
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup
+
+      - run: bun run build
+        shell: bash

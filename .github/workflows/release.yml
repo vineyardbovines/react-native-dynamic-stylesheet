@@ -1,0 +1,36 @@
+name: release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup
+
+      - run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        shell: bash
+
+      - run: bun run build
+        shell: bash
+
+      - run: bun run release
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

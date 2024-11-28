@@ -1,0 +1,21 @@
+{
+  "cxxNamespace": ["stylesheet"],
+  "ios": {
+    "iosModuleName": "NitroStyleSheet"
+  },
+  "android": {
+    "androidNamespace": ["stylesheet"],
+    "androidCxxLibName": "NitroStyleSheet"
+  },
+  "autolinking": {
+    "NitroAccessibilityModule": {
+      "swift": "HybridNitroAccessibilityModule",
+      "kotlin": "HybridNitroAccessibilityModule"
+    },
+    "NitroDeviceModule": {
+      "swift": "HybridNitroDeviceModule",
+      "kotlin": "HybridNitroDeviceModule"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}

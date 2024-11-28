@@ -1,0 +1,23 @@
+name: Setup
+description: Setup node, bun, etc.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/cache@v4
+      with:
+        path: .turbo
+        key: ${{ runner.os }}-turbo-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-turbo-
+
+    - uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: 1.1.0
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - run: bun install
+      shell: bash

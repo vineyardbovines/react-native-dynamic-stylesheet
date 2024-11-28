@@ -1,0 +1,58 @@
+name: pr merge
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  issue-check:
+    runs-on: ubuntu-latest
+
+    if: github.event.pull_request.merged == true
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+
+            const issueRefs = pr.body.match(/#(\d+)/g) || [];
+
+            if (issueRefs.length === 0) return
+
+            const issueNumbers = issueRefs.map(ref => parseInt(ref.slice(1)));
+
+            for (const issueNumber of issueNumbers) {
+              try {
+                const { data: issue } = await github.rest.issues.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber
+                });
+
+                if (issue.state === 'open') {
+                  github.rest.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    labels: ['released'],
+                    state: 'closed'
+                  })
+                }
+              } catch {
+                return
+              }
+            }

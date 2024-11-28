@@ -1,0 +1,20 @@
+export interface AccessibilitySettings {
+  isReduceMotionEnabled: boolean | null;
+  isReduceTransparencyEnabled: boolean | null;
+  isGrayscaleEnabled: boolean | null;
+  isBoldTextEnabled: boolean | null;
+  isVoiceOverEnabled: boolean | null;
+  isSwitchControlEnabled: boolean | null;
+  isVideoAutoplayEnabled: boolean | null;
+  isClosedCaptioningEnabled: boolean | null;
+  isDarkerSystemColorsEnabled: boolean | null;
+  isMonoAudioEnabled: boolean | null;
+  isShakeToUndoEnabled: boolean | null;
+  isDifferentiateWithoutColorEnabled: boolean | null;
+  isInvertColorsEnabled: boolean | null;
+  isShowButtonShapesEnabled: boolean | null;
+  prefersCrossFadeTransitionsEnabled: boolean | null;
+  isSpeakScreenEnabled: boolean | null;
+  isSpeakSelectionEnabled: boolean | null;
+  isOnOffSwitchLabelsEnabled: boolean | null;
+}

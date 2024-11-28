@@ -1,0 +1,87 @@
+{
+  "name": "react-native-nitro-stylesheet",
+  "version": "0.0.0",
+  "description": "Performant, extended StyleSheet for React Native",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "react-native": "./src/index.ts",
+  "files": [
+    "src",
+    "dist",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "android/build.gradle",
+    "android/gradle.properties",
+    "android/CMakeLists.txt",
+    "android/src",
+    "ios/**/*.h",
+    "ios/**/*.m",
+    "ios/**/*.mm",
+    "ios/**/*.cpp",
+    "ios/**/*.hpp",
+    "ios/**/*.swift",
+    "react-native.config.js",
+    "app.plugin.js",
+    "*.podspec",
+    "README.md"
+  ],
+  "keywords": [
+    "react-native",
+    "nitro",
+    "stylesheet",
+    "ios",
+    "android",
+    "accessibility",
+    "colorscheme",
+    "darkmode",
+    "styles",
+    "themeing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vineyardbovines/react-native-nitro-stylesheet.git"
+  },
+  "author": "Spence Pope <spencerfpope@gmail.com>",
+  "homepage": "https://github.com/vineyardbovines/react-native-nitro-stylesheet#readme",
+  "bugs": {
+    "url": "https://github.com/vineyardbovines/react-native-nitro-stylesheet/issues"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules .tsbuildinfo dist",
+    "build": "tsup",
+    "codegen": "bun run nitro-codegen",
+    "test": "jest",
+    "dev": "tsc --watch --noEmit",
+    "typecheck": "tsc --pretty --noEmit",
+    "spellcheck": "bun x cspell . --fail-fast --gitignore --no-progress --show-suggestions",
+    "format": "bun x @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true .",
+    "release": "release-it",
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cz-commitlint": "^19.5.0",
+    "@release-it/conventional-changelog": "^9.0.3",
+    "@types/bun": "latest",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.12",
+    "commitizen": "^4.3.1",
+    "commitlint": "^19.6.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "jest": "^29.7.0",
+    "lefthook": "^1.8.4",
+    "nitro-codegen": "^0.18.0",
+    "react": "^18.3.1",
+    "react-native": "^0.76.3",
+    "release-it": "^17.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "@types/react": ">=18.3.0",
+    "react": ">=18.3.0",
+    "react-native": ">=0.76.0"
+  }
+}
