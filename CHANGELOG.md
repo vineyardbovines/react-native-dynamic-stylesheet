@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.0.9 (2024-11-29)</small>
+
+* chore: add nitrogen ([f22992f](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/f22992f))
+
 ## <small>0.0.8 (2024-11-29)</small>
 
 * chore: update publish registry ([c6e9d62](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/c6e9d62))
