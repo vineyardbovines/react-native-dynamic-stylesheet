@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.0.4 (2024-11-29)</small>
+
+* chore: update publish workflow ([d58720e](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/d58720e))
+
 ## <small>0.0.3 (2024-11-29)</small>
 
 * chore: readme ([04c68fc](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/04c68fc))
