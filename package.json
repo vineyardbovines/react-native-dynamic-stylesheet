@@ -1,6 +1,6 @@
 {
   "name": "@vineyardbovines/react-native-nitro-stylesheet",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Performant, extended StyleSheet for React Native",
   "main": "dist/index.js",
   "module": "dist/index.js",
