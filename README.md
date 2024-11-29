@@ -7,19 +7,6 @@ Performant, extended [StyleSheet](https://reactnative.dev/docs/stylesheet) for R
 - 📐 Automatic responsive scaling
 - 🏃‍♂️ Powered by [Nitro Modules](https://nitro.margelo.com)
 
-**Table of Contents**
-
-- [react-native-nitro-stylesheet](#react-native-nitro-stylesheet)
-  - [Overview](#overview)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Themes](#themes)
-    - [`StyleSheet.init`](#stylesheetinit)
-    - [`StyleSheet.create`](#stylesheetcreate)
-    - [`useAccessibilitySettings()`](#useaccessibilitysettings)
-    - [Nitro Modules](#nitro-modules)
-
-
 ## Overview
 
 When calling `StyleSheet.create`, a few things are applied automatically:
