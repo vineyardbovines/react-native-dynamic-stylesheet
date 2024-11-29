@@ -21,24 +21,24 @@ class HybridNitroAccessibilityModule : HybridNitroAccessibilityModuleSpec {
     public func getAllSettings() throws -> AccessibilitySettings {
         func getAllSettingsFn() -> AccessibilitySettings {
             return AccessibilitySettings(
-                isReduceMotionEnabled: try getIsReduceMotionEnabled(),
-                isReduceTransparencyEnabled: try getIsReduceTransparencyEnabled(),
-                isDifferentiateWithoutColorEnabled: try getIsDifferentiateWithoutColorEnabled(),
-                isInvertColorsEnabled: try getIsInvertColorsEnabled(),
-                isShowButtonShapesEnabled: try getIsShowButtonShapesEnabled(),
-                isBoldTextEnabled: try getIsBoldTextEnabled(),
-                isVoiceOverEnabled: try getIsVoiceOverEnabled(),
-                isSwitchControlEnabled: try getIsSwitchControlEnabled(),
-                isVideoAutoplayEnabled: try getIsVideoAutoplayEnabled(),
-                isClosedCaptioningEnabled: try getIsClosedCaptioningEnabled(),
-                prefersCrossFadeTransitions: try getPrefersCrossFadeTransitionsEnabled(),
-                isGrayscaleEnabled: try getIsGrayscaleEnabled(),
-                isDarkerSystemColorsEnabled: try getIsDarkerSystemColorsEnabled(),
-                isMonoAudioEnabled: try getIsMonoAudioEnabled(),
-                isShakeToUndoEnabled: try getIsShakeToUndoEnabled(),
-                isSpeakScreenEnabled: try getIsSpeakScreenEnabled(),
-                isSpeakSelectionEnabled: try getIsSpeakSelectionEnabled(),
-                isOnOffSwitchLabelsEnabled: try getIsOnOffSwitchLabelsEnabled()
+                isReduceMotionEnabled: UIAccessibility.isReduceMotionEnabled,
+                isReduceTransparencyEnabled: UIAccessibility.isReduceTransparencyEnabled,
+                isDifferentiateWithoutColorEnabled: UIAccessibility.shouldDifferentiateWithoutColor,
+                isInvertColorsEnabled: UIAccessibility.isInvertColorsEnabled,
+                isShowButtonShapesEnabled: UIAccessibility.buttonShapesEnabled,
+                isBoldTextEnabled: UIAccessibility.isBoldTextEnabled,
+                isVoiceOverEnabled: UIAccessibility.isVoiceOverRunning,
+                isSwitchControlEnabled: UIAccessibility.isSwitchControlRunning,
+                isVideoAutoplayEnabled: UIAccessibility.isVideoAutoplayEnabled,
+                isClosedCaptioningEnabled: UIAccessibility.isClosedCaptioningEnabled,
+                prefersCrossFadeTransitions: UIAccessibility.prefersCrossFadeTransitions,
+                isGrayscaleEnabled: UIAccessibility.isGrayscaleEnabled,
+                isDarkerSystemColorsEnabled: UIAccessibility.isDarkerSystemColorsEnabled,
+                isMonoAudioEnabled: UIAccessibility.isMonoAudioEnabled,
+                isShakeToUndoEnabled: UIAccessibility.isShakeToUndoEnabled,
+                isSpeakScreenEnabled: UIAccessibility.isSpeakScreenEnabled,
+                isSpeakSelectionEnabled: UIAccessibility.isSpeakSelectionEnabled,
+                isOnOffSwitchLabelsEnabled: UIAccessibility.isOnOffSwitchLabelsEnabled
             )
         }
 
