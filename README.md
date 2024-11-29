@@ -1,8 +1,11 @@
 # react-native-nitro-stylesheet
 
-Performant, extended [StyleSheet](https://reactnative.dev/docs/stylesheet) for React Native with automatic device scaling, accessibility, and dynamic color scheme detection applied to your styles.
+Performant, extended [StyleSheet](https://reactnative.dev/docs/stylesheet) for React Native. Inspired by [Unistyles](https://github.com/jpudysz/react-native-unistyles).
 
-Built with [Nitro](https://nitro.margelo.com) and inspired by [Unistyles](https://github.com/jpudysz/react-native-unistyles).
+- ⚡ Native StyleSheet API, no learning curve or overhead
+- ♿ Built-in accessibility overrides
+- 📐 Automatic responsive scaling
+- 🏃‍♂️ Powered by [Nitro Modules](https://nitro.margelo.com)
 
 **Table of Contents**
 
