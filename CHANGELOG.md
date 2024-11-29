@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.0.10 (2024-11-29)</small>
+
+* fix: differentiate without color ([1e65969](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/1e65969))
+
 ## <small>0.0.9 (2024-11-29)</small>
 
 * chore: add nitrogen ([f22992f](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/f22992f))
