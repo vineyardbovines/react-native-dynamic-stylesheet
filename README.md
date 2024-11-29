@@ -7,20 +7,6 @@ Performant, extended [StyleSheet](https://reactnative.dev/docs/stylesheet) for R
 - 📐 Automatic responsive scaling
 - 🏃‍♂️ Powered by [Nitro Modules](https://nitro.margelo.com)
 
-## Overview
-
-When calling `StyleSheet.create`, a few things are applied automatically:
-
-- Accessibility overrides
-- Scaling based on device size
-- Dynamic theming (light and dark mode)
-
-Scaling is applied based on the device dimensions, as well as any accessibility enlargement setting (content size category).
-
-Accessibility settings the user has applied will enhance or override when appropriate.
-
-You can pass your own themes to the stylesheet or use the defaults provided.
-
 ## Installation
 
 Install in any React Native application or library.
