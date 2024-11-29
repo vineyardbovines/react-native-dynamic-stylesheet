@@ -1,5 +1,5 @@
 {
-  "name": "react-native-nitro-stylesheet",
+  "name": "@vineyardbovines/react-native-nitro-stylesheet",
   "version": "0.0.5",
   "description": "Performant, extended StyleSheet for React Native",
   "main": "dist/index.js",
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vineyardbovines/react-native-nitro-stylesheet.git"
+    "url": "git+https://github.com/vineyardbovines/react-native-nitro-stylesheet.git"
   },
   "author": "Spence Pope <spencerfpope@gmail.com>",
   "homepage": "https://github.com/vineyardbovines/react-native-nitro-stylesheet#readme",
