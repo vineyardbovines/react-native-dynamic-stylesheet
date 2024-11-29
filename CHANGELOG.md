@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.0.11 (2024-11-29)</small>
+
+* fix: differentiate without color ([ae6a350](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/ae6a350))
+
 ## <small>0.0.10 (2024-11-29)</small>
 
 * fix: differentiate without color ([1e65969](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/1e65969))
