@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.0.8 (2024-11-29)</small>
+
+* chore: update publish registry ([c6e9d62](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/c6e9d62))
+
 ## <small>0.0.7 (2024-11-29)</small>
 
 * chore: update publish registry ([3903fad](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/3903fad))
