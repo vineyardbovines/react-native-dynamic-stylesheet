@@ -29,8 +29,8 @@ namespace margelo::nitro::stylesheet {
    */
   struct AccessibilitySettings {
   public:
-    std::optional<bool> isReduceMotionEnabledEnabled     SWIFT_PRIVATE;
-    std::optional<bool> isReduceTransparencyEnabledEnabled     SWIFT_PRIVATE;
+    std::optional<bool> isReduceMotionEnabled     SWIFT_PRIVATE;
+    std::optional<bool> isReduceTransparencyEnabled     SWIFT_PRIVATE;
     std::optional<bool> isDifferentiateWithoutColorEnabled     SWIFT_PRIVATE;
     std::optional<bool> isInvertColorsEnabled     SWIFT_PRIVATE;
     std::optional<bool> isShowButtonShapesEnabled     SWIFT_PRIVATE;
@@ -49,7 +49,7 @@ namespace margelo::nitro::stylesheet {
     std::optional<bool> isOnOffSwitchLabelsEnabled     SWIFT_PRIVATE;
 
   public:
-    explicit AccessibilitySettings(std::optional<bool> isReduceMotionEnabledEnabled, std::optional<bool> isReduceTransparencyEnabledEnabled, std::optional<bool> isDifferentiateWithoutColorEnabled, std::optional<bool> isInvertColorsEnabled, std::optional<bool> isShowButtonShapesEnabled, std::optional<bool> isBoldTextEnabled, std::optional<bool> isVoiceOverEnabled, std::optional<bool> isSwitchControlEnabled, std::optional<bool> isVideoAutoplayEnabled, std::optional<bool> isClosedCaptioningEnabled, std::optional<bool> prefersCrossFadeTransitions, std::optional<bool> isGrayscaleEnabled, std::optional<bool> isDarkerSystemColorsEnabled, std::optional<bool> isMonoAudioEnabled, std::optional<bool> isShakeToUndoEnabled, std::optional<bool> isSpeakScreenEnabled, std::optional<bool> isSpeakSelectionEnabled, std::optional<bool> isOnOffSwitchLabelsEnabled): isReduceMotionEnabledEnabled(isReduceMotionEnabledEnabled), isReduceTransparencyEnabledEnabled(isReduceTransparencyEnabledEnabled), isDifferentiateWithoutColorEnabled(isDifferentiateWithoutColorEnabled), isInvertColorsEnabled(isInvertColorsEnabled), isShowButtonShapesEnabled(isShowButtonShapesEnabled), isBoldTextEnabled(isBoldTextEnabled), isVoiceOverEnabled(isVoiceOverEnabled), isSwitchControlEnabled(isSwitchControlEnabled), isVideoAutoplayEnabled(isVideoAutoplayEnabled), isClosedCaptioningEnabled(isClosedCaptioningEnabled), prefersCrossFadeTransitions(prefersCrossFadeTransitions), isGrayscaleEnabled(isGrayscaleEnabled), isDarkerSystemColorsEnabled(isDarkerSystemColorsEnabled), isMonoAudioEnabled(isMonoAudioEnabled), isShakeToUndoEnabled(isShakeToUndoEnabled), isSpeakScreenEnabled(isSpeakScreenEnabled), isSpeakSelectionEnabled(isSpeakSelectionEnabled), isOnOffSwitchLabelsEnabled(isOnOffSwitchLabelsEnabled) {}
+    explicit AccessibilitySettings(std::optional<bool> isReduceMotionEnabled, std::optional<bool> isReduceTransparencyEnabled, std::optional<bool> isDifferentiateWithoutColorEnabled, std::optional<bool> isInvertColorsEnabled, std::optional<bool> isShowButtonShapesEnabled, std::optional<bool> isBoldTextEnabled, std::optional<bool> isVoiceOverEnabled, std::optional<bool> isSwitchControlEnabled, std::optional<bool> isVideoAutoplayEnabled, std::optional<bool> isClosedCaptioningEnabled, std::optional<bool> prefersCrossFadeTransitions, std::optional<bool> isGrayscaleEnabled, std::optional<bool> isDarkerSystemColorsEnabled, std::optional<bool> isMonoAudioEnabled, std::optional<bool> isShakeToUndoEnabled, std::optional<bool> isSpeakScreenEnabled, std::optional<bool> isSpeakSelectionEnabled, std::optional<bool> isOnOffSwitchLabelsEnabled): isReduceMotionEnabled(isReduceMotionEnabled), isReduceTransparencyEnabled(isReduceTransparencyEnabled), isDifferentiateWithoutColorEnabled(isDifferentiateWithoutColorEnabled), isInvertColorsEnabled(isInvertColorsEnabled), isShowButtonShapesEnabled(isShowButtonShapesEnabled), isBoldTextEnabled(isBoldTextEnabled), isVoiceOverEnabled(isVoiceOverEnabled), isSwitchControlEnabled(isSwitchControlEnabled), isVideoAutoplayEnabled(isVideoAutoplayEnabled), isClosedCaptioningEnabled(isClosedCaptioningEnabled), prefersCrossFadeTransitions(prefersCrossFadeTransitions), isGrayscaleEnabled(isGrayscaleEnabled), isDarkerSystemColorsEnabled(isDarkerSystemColorsEnabled), isMonoAudioEnabled(isMonoAudioEnabled), isShakeToUndoEnabled(isShakeToUndoEnabled), isSpeakScreenEnabled(isSpeakScreenEnabled), isSpeakSelectionEnabled(isSpeakSelectionEnabled), isOnOffSwitchLabelsEnabled(isOnOffSwitchLabelsEnabled) {}
   };
 
 } // namespace margelo::nitro::stylesheet
@@ -64,8 +64,8 @@ namespace margelo::nitro {
     static inline AccessibilitySettings fromJSI(jsi::Runtime& runtime, const jsi::Value& arg) {
       jsi::Object obj = arg.asObject(runtime);
       return AccessibilitySettings(
-        JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isReduceMotionEnabledEnabled")),
-        JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isReduceTransparencyEnabledEnabled")),
+        JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isReduceMotionEnabled")),
+        JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isReduceTransparencyEnabled")),
         JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isDifferentiateWithoutColorEnabled")),
         JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isInvertColorsEnabled")),
         JSIConverter<std::optional<bool>>::fromJSI(runtime, obj.getProperty(runtime, "isShowButtonShapesEnabled")),
@@ -86,8 +86,8 @@ namespace margelo::nitro {
     }
     static inline jsi::Value toJSI(jsi::Runtime& runtime, const AccessibilitySettings& arg) {
       jsi::Object obj(runtime);
-      obj.setProperty(runtime, "isReduceMotionEnabledEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isReduceMotionEnabledEnabled));
-      obj.setProperty(runtime, "isReduceTransparencyEnabledEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isReduceTransparencyEnabledEnabled));
+      obj.setProperty(runtime, "isReduceMotionEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isReduceMotionEnabled));
+      obj.setProperty(runtime, "isReduceTransparencyEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isReduceTransparencyEnabled));
       obj.setProperty(runtime, "isDifferentiateWithoutColorEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isDifferentiateWithoutColorEnabled));
       obj.setProperty(runtime, "isInvertColorsEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isInvertColorsEnabled));
       obj.setProperty(runtime, "isShowButtonShapesEnabled", JSIConverter<std::optional<bool>>::toJSI(runtime, arg.isShowButtonShapesEnabled));
@@ -111,8 +111,8 @@ namespace margelo::nitro {
         return false;
       }
       jsi::Object obj = value.getObject(runtime);
-      if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isReduceMotionEnabledEnabled"))) return false;
-      if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isReduceTransparencyEnabledEnabled"))) return false;
+      if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isReduceMotionEnabled"))) return false;
+      if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isReduceTransparencyEnabled"))) return false;
       if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isDifferentiateWithoutColorEnabled"))) return false;
       if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isInvertColorsEnabled"))) return false;
       if (!JSIConverter<std::optional<bool>>::canConvert(runtime, obj.getProperty(runtime, "isShowButtonShapesEnabled"))) return false;

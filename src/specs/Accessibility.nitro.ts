@@ -1,8 +1,8 @@
 import type { HybridObject } from "react-native-nitro-modules";
 
 export interface AccessibilitySettings {
-  readonly isReduceMotionEnabledEnabled: boolean | null;
-  readonly isReduceTransparencyEnabledEnabled: boolean | null;
+  readonly isReduceMotionEnabled: boolean | null;
+  readonly isReduceTransparencyEnabled: boolean | null;
   readonly isDifferentiateWithoutColorEnabled: boolean | null;
   readonly isInvertColorsEnabled: boolean | null;
   readonly isShowButtonShapesEnabled: boolean | null;

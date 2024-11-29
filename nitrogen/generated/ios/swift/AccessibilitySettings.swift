@@ -18,15 +18,15 @@ public extension AccessibilitySettings {
   /**
    * Create a new instance of `AccessibilitySettings`.
    */
-  init(isReduceMotionEnabledEnabled: Bool?, isReduceTransparencyEnabledEnabled: Bool?, isDifferentiateWithoutColorEnabled: Bool?, isInvertColorsEnabled: Bool?, isShowButtonShapesEnabled: Bool?, isBoldTextEnabled: Bool?, isVoiceOverEnabled: Bool?, isSwitchControlEnabled: Bool?, isVideoAutoplayEnabled: Bool?, isClosedCaptioningEnabled: Bool?, prefersCrossFadeTransitions: Bool?, isGrayscaleEnabled: Bool?, isDarkerSystemColorsEnabled: Bool?, isMonoAudioEnabled: Bool?, isShakeToUndoEnabled: Bool?, isSpeakScreenEnabled: Bool?, isSpeakSelectionEnabled: Bool?, isOnOffSwitchLabelsEnabled: Bool?) {
+  init(isReduceMotionEnabled: Bool?, isReduceTransparencyEnabled: Bool?, isDifferentiateWithoutColorEnabled: Bool?, isInvertColorsEnabled: Bool?, isShowButtonShapesEnabled: Bool?, isBoldTextEnabled: Bool?, isVoiceOverEnabled: Bool?, isSwitchControlEnabled: Bool?, isVideoAutoplayEnabled: Bool?, isClosedCaptioningEnabled: Bool?, prefersCrossFadeTransitions: Bool?, isGrayscaleEnabled: Bool?, isDarkerSystemColorsEnabled: Bool?, isMonoAudioEnabled: Bool?, isShakeToUndoEnabled: Bool?, isSpeakScreenEnabled: Bool?, isSpeakSelectionEnabled: Bool?, isOnOffSwitchLabelsEnabled: Bool?) {
     self.init({ () -> bridge.std__optional_bool_ in
-      if let __unwrappedValue = isReduceMotionEnabledEnabled {
+      if let __unwrappedValue = isReduceMotionEnabled {
         return bridge.create_std__optional_bool_(__unwrappedValue)
       } else {
         return .init()
       }
     }(), { () -> bridge.std__optional_bool_ in
-      if let __unwrappedValue = isReduceTransparencyEnabledEnabled {
+      if let __unwrappedValue = isReduceTransparencyEnabled {
         return bridge.create_std__optional_bool_(__unwrappedValue)
       } else {
         return .init()
@@ -130,14 +130,14 @@ public extension AccessibilitySettings {
     }())
   }
 
-  var isReduceMotionEnabledEnabled: Bool? {
+  var isReduceMotionEnabled: Bool? {
     @inline(__always)
     get {
-      return self.__isReduceMotionEnabledEnabled.value
+      return self.__isReduceMotionEnabled.value
     }
     @inline(__always)
     set {
-      self.__isReduceMotionEnabledEnabled = { () -> bridge.std__optional_bool_ in
+      self.__isReduceMotionEnabled = { () -> bridge.std__optional_bool_ in
         if let __unwrappedValue = newValue {
           return bridge.create_std__optional_bool_(__unwrappedValue)
         } else {
@@ -147,14 +147,14 @@ public extension AccessibilitySettings {
     }
   }
   
-  var isReduceTransparencyEnabledEnabled: Bool? {
+  var isReduceTransparencyEnabled: Bool? {
     @inline(__always)
     get {
-      return self.__isReduceTransparencyEnabledEnabled.value
+      return self.__isReduceTransparencyEnabled.value
     }
     @inline(__always)
     set {
-      self.__isReduceTransparencyEnabledEnabled = { () -> bridge.std__optional_bool_ in
+      self.__isReduceTransparencyEnabled = { () -> bridge.std__optional_bool_ in
         if let __unwrappedValue = newValue {
           return bridge.create_std__optional_bool_(__unwrappedValue)
         } else {

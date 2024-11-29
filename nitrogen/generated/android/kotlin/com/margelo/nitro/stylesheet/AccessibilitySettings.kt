@@ -17,8 +17,8 @@ import com.margelo.nitro.core.*
 @DoNotStrip
 @Keep
 data class AccessibilitySettings(
-  val isReduceMotionEnabledEnabled: Boolean?,
-  val isReduceTransparencyEnabledEnabled: Boolean?,
+  val isReduceMotionEnabled: Boolean?,
+  val isReduceTransparencyEnabled: Boolean?,
   val isDifferentiateWithoutColorEnabled: Boolean?,
   val isInvertColorsEnabled: Boolean?,
   val isShowButtonShapesEnabled: Boolean?,

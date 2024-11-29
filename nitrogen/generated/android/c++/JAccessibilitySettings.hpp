@@ -30,10 +30,10 @@ namespace margelo::nitro::stylesheet {
     [[maybe_unused]]
     AccessibilitySettings toCpp() const {
       static const auto clazz = javaClassStatic();
-      static const auto fieldIsReduceMotionEnabledEnabled = clazz->getField<jni::JBoolean>("isReduceMotionEnabledEnabled");
-      jni::local_ref<jni::JBoolean> isReduceMotionEnabledEnabled = this->getFieldValue(fieldIsReduceMotionEnabledEnabled);
-      static const auto fieldIsReduceTransparencyEnabledEnabled = clazz->getField<jni::JBoolean>("isReduceTransparencyEnabledEnabled");
-      jni::local_ref<jni::JBoolean> isReduceTransparencyEnabledEnabled = this->getFieldValue(fieldIsReduceTransparencyEnabledEnabled);
+      static const auto fieldIsReduceMotionEnabled = clazz->getField<jni::JBoolean>("isReduceMotionEnabled");
+      jni::local_ref<jni::JBoolean> isReduceMotionEnabled = this->getFieldValue(fieldIsReduceMotionEnabled);
+      static const auto fieldIsReduceTransparencyEnabled = clazz->getField<jni::JBoolean>("isReduceTransparencyEnabled");
+      jni::local_ref<jni::JBoolean> isReduceTransparencyEnabled = this->getFieldValue(fieldIsReduceTransparencyEnabled);
       static const auto fieldIsDifferentiateWithoutColorEnabled = clazz->getField<jni::JBoolean>("isDifferentiateWithoutColorEnabled");
       jni::local_ref<jni::JBoolean> isDifferentiateWithoutColorEnabled = this->getFieldValue(fieldIsDifferentiateWithoutColorEnabled);
       static const auto fieldIsInvertColorsEnabled = clazz->getField<jni::JBoolean>("isInvertColorsEnabled");
@@ -67,8 +67,8 @@ namespace margelo::nitro::stylesheet {
       static const auto fieldIsOnOffSwitchLabelsEnabled = clazz->getField<jni::JBoolean>("isOnOffSwitchLabelsEnabled");
       jni::local_ref<jni::JBoolean> isOnOffSwitchLabelsEnabled = this->getFieldValue(fieldIsOnOffSwitchLabelsEnabled);
       return AccessibilitySettings(
-        isReduceMotionEnabledEnabled != nullptr ? std::make_optional(static_cast<bool>(isReduceMotionEnabledEnabled->value())) : std::nullopt,
-        isReduceTransparencyEnabledEnabled != nullptr ? std::make_optional(static_cast<bool>(isReduceTransparencyEnabledEnabled->value())) : std::nullopt,
+        isReduceMotionEnabled != nullptr ? std::make_optional(static_cast<bool>(isReduceMotionEnabled->value())) : std::nullopt,
+        isReduceTransparencyEnabled != nullptr ? std::make_optional(static_cast<bool>(isReduceTransparencyEnabled->value())) : std::nullopt,
         isDifferentiateWithoutColorEnabled != nullptr ? std::make_optional(static_cast<bool>(isDifferentiateWithoutColorEnabled->value())) : std::nullopt,
         isInvertColorsEnabled != nullptr ? std::make_optional(static_cast<bool>(isInvertColorsEnabled->value())) : std::nullopt,
         isShowButtonShapesEnabled != nullptr ? std::make_optional(static_cast<bool>(isShowButtonShapesEnabled->value())) : std::nullopt,
@@ -95,8 +95,8 @@ namespace margelo::nitro::stylesheet {
     [[maybe_unused]]
     static jni::local_ref<JAccessibilitySettings::javaobject> fromCpp(const AccessibilitySettings& value) {
       return newInstance(
-        value.isReduceMotionEnabledEnabled.has_value() ? jni::JBoolean::valueOf(value.isReduceMotionEnabledEnabled.value()) : nullptr,
-        value.isReduceTransparencyEnabledEnabled.has_value() ? jni::JBoolean::valueOf(value.isReduceTransparencyEnabledEnabled.value()) : nullptr,
+        value.isReduceMotionEnabled.has_value() ? jni::JBoolean::valueOf(value.isReduceMotionEnabled.value()) : nullptr,
+        value.isReduceTransparencyEnabled.has_value() ? jni::JBoolean::valueOf(value.isReduceTransparencyEnabled.value()) : nullptr,
         value.isDifferentiateWithoutColorEnabled.has_value() ? jni::JBoolean::valueOf(value.isDifferentiateWithoutColorEnabled.value()) : nullptr,
         value.isInvertColorsEnabled.has_value() ? jni::JBoolean::valueOf(value.isInvertColorsEnabled.value()) : nullptr,
         value.isShowButtonShapesEnabled.has_value() ? jni::JBoolean::valueOf(value.isShowButtonShapesEnabled.value()) : nullptr,
