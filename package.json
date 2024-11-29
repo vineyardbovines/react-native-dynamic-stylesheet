@@ -39,10 +39,6 @@
     "styles",
     "themeing"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vineyardbovines/react-native-nitro-stylesheet.git"

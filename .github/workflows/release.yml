@@ -30,7 +30,7 @@ jobs:
       - run: bun run build
         shell: bash
 
-      - run: npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN}}
+      - run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
         shell: bash
 
       - run: bun run release
