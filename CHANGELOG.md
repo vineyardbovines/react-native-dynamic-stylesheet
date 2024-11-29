@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.0.14 (2024-11-29)</small>
+
+* fix: nitro declaration ([d005257](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/d005257))
+
 ## <small>0.0.13 (2024-11-29)</small>
 
 * fix: differentiate without color ([b822058](https://github.com/vineyardbovines/react-native-nitro-stylesheet/commit/b822058))
