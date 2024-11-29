@@ -30,10 +30,8 @@ jobs:
       - run: bun run build
         shell: bash
 
-      - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+      - run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
         shell: bash
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: bun run release --ci
         shell: bash
