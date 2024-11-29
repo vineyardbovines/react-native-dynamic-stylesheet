@@ -24,6 +24,7 @@
     "ios/**/*.swift",
     "react-native.config.js",
     "app.plugin.js",
+    "nitrogen",
     "*.podspec",
     "README.md"
   ],
