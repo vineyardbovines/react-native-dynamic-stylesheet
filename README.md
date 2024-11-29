@@ -179,7 +179,7 @@ function Component() {
         isDifferentiateWithoutColorEnabled,
         isInvertColorsEnabled,
         isShowButtonShapesEnabled,
-        prefersCrossFadeTransitionsEnabled,
+        prefersCrossFadeTransitions,
         isSpeakScreenEnabled,
         isSpeakSelectionEnabled,
         isOnOffSwitchLabelsEnabled,

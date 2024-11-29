@@ -11,7 +11,7 @@ export interface AccessibilitySettings {
   readonly isSwitchControlEnabled: boolean | null;
   readonly isVideoAutoplayEnabled: boolean | null;
   readonly isClosedCaptioningEnabled: boolean | null;
-  readonly isPrefersCrossFadeTransitionsEnabled: boolean | null;
+  readonly prefersCrossFadeTransitions: boolean | null;
   readonly isGrayscaleEnabled: boolean | null;
   readonly isDarkerSystemColorsEnabled: boolean | null;
   readonly isMonoAudioEnabled: boolean | null;

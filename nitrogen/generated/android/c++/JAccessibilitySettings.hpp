@@ -50,8 +50,8 @@ namespace margelo::nitro::stylesheet {
       jni::local_ref<jni::JBoolean> isVideoAutoplayEnabled = this->getFieldValue(fieldIsVideoAutoplayEnabled);
       static const auto fieldIsClosedCaptioningEnabled = clazz->getField<jni::JBoolean>("isClosedCaptioningEnabled");
       jni::local_ref<jni::JBoolean> isClosedCaptioningEnabled = this->getFieldValue(fieldIsClosedCaptioningEnabled);
-      static const auto fieldIsPrefersCrossFadeTransitionsEnabled = clazz->getField<jni::JBoolean>("isPrefersCrossFadeTransitionsEnabled");
-      jni::local_ref<jni::JBoolean> isPrefersCrossFadeTransitionsEnabled = this->getFieldValue(fieldIsPrefersCrossFadeTransitionsEnabled);
+      static const auto fieldPrefersCrossFadeTransitions = clazz->getField<jni::JBoolean>("prefersCrossFadeTransitions");
+      jni::local_ref<jni::JBoolean> prefersCrossFadeTransitions = this->getFieldValue(fieldPrefersCrossFadeTransitions);
       static const auto fieldIsGrayscaleEnabled = clazz->getField<jni::JBoolean>("isGrayscaleEnabled");
       jni::local_ref<jni::JBoolean> isGrayscaleEnabled = this->getFieldValue(fieldIsGrayscaleEnabled);
       static const auto fieldIsDarkerSystemColorsEnabled = clazz->getField<jni::JBoolean>("isDarkerSystemColorsEnabled");
@@ -77,7 +77,7 @@ namespace margelo::nitro::stylesheet {
         isSwitchControlEnabled != nullptr ? std::make_optional(static_cast<bool>(isSwitchControlEnabled->value())) : std::nullopt,
         isVideoAutoplayEnabled != nullptr ? std::make_optional(static_cast<bool>(isVideoAutoplayEnabled->value())) : std::nullopt,
         isClosedCaptioningEnabled != nullptr ? std::make_optional(static_cast<bool>(isClosedCaptioningEnabled->value())) : std::nullopt,
-        isPrefersCrossFadeTransitionsEnabled != nullptr ? std::make_optional(static_cast<bool>(isPrefersCrossFadeTransitionsEnabled->value())) : std::nullopt,
+        prefersCrossFadeTransitions != nullptr ? std::make_optional(static_cast<bool>(prefersCrossFadeTransitions->value())) : std::nullopt,
         isGrayscaleEnabled != nullptr ? std::make_optional(static_cast<bool>(isGrayscaleEnabled->value())) : std::nullopt,
         isDarkerSystemColorsEnabled != nullptr ? std::make_optional(static_cast<bool>(isDarkerSystemColorsEnabled->value())) : std::nullopt,
         isMonoAudioEnabled != nullptr ? std::make_optional(static_cast<bool>(isMonoAudioEnabled->value())) : std::nullopt,
@@ -105,7 +105,7 @@ namespace margelo::nitro::stylesheet {
         value.isSwitchControlEnabled.has_value() ? jni::JBoolean::valueOf(value.isSwitchControlEnabled.value()) : nullptr,
         value.isVideoAutoplayEnabled.has_value() ? jni::JBoolean::valueOf(value.isVideoAutoplayEnabled.value()) : nullptr,
         value.isClosedCaptioningEnabled.has_value() ? jni::JBoolean::valueOf(value.isClosedCaptioningEnabled.value()) : nullptr,
-        value.isPrefersCrossFadeTransitionsEnabled.has_value() ? jni::JBoolean::valueOf(value.isPrefersCrossFadeTransitionsEnabled.value()) : nullptr,
+        value.prefersCrossFadeTransitions.has_value() ? jni::JBoolean::valueOf(value.prefersCrossFadeTransitions.value()) : nullptr,
         value.isGrayscaleEnabled.has_value() ? jni::JBoolean::valueOf(value.isGrayscaleEnabled.value()) : nullptr,
         value.isDarkerSystemColorsEnabled.has_value() ? jni::JBoolean::valueOf(value.isDarkerSystemColorsEnabled.value()) : nullptr,
         value.isMonoAudioEnabled.has_value() ? jni::JBoolean::valueOf(value.isMonoAudioEnabled.value()) : nullptr,

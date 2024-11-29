@@ -13,7 +13,7 @@ export interface AccessibilitySettings {
   isDifferentiateWithoutColorEnabled: boolean | null;
   isInvertColorsEnabled: boolean | null;
   isShowButtonShapesEnabled: boolean | null;
-  prefersCrossFadeTransitionsEnabled: boolean | null;
+  prefersCrossFadeTransitions: boolean | null;
   isSpeakScreenEnabled: boolean | null;
   isSpeakSelectionEnabled: boolean | null;
   isOnOffSwitchLabelsEnabled: boolean | null;

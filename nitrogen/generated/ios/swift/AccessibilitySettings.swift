@@ -18,7 +18,7 @@ public extension AccessibilitySettings {
   /**
    * Create a new instance of `AccessibilitySettings`.
    */
-  init(isReduceMotionEnabledEnabled: Bool?, isReduceTransparencyEnabledEnabled: Bool?, isDifferentiateWithoutColorEnabled: Bool?, isInvertColorsEnabled: Bool?, isShowButtonShapesEnabled: Bool?, isBoldTextEnabled: Bool?, isVoiceOverEnabled: Bool?, isSwitchControlEnabled: Bool?, isVideoAutoplayEnabled: Bool?, isClosedCaptioningEnabled: Bool?, isPrefersCrossFadeTransitionsEnabled: Bool?, isGrayscaleEnabled: Bool?, isDarkerSystemColorsEnabled: Bool?, isMonoAudioEnabled: Bool?, isShakeToUndoEnabled: Bool?, isSpeakScreenEnabled: Bool?, isSpeakSelectionEnabled: Bool?, isOnOffSwitchLabelsEnabled: Bool?) {
+  init(isReduceMotionEnabledEnabled: Bool?, isReduceTransparencyEnabledEnabled: Bool?, isDifferentiateWithoutColorEnabled: Bool?, isInvertColorsEnabled: Bool?, isShowButtonShapesEnabled: Bool?, isBoldTextEnabled: Bool?, isVoiceOverEnabled: Bool?, isSwitchControlEnabled: Bool?, isVideoAutoplayEnabled: Bool?, isClosedCaptioningEnabled: Bool?, prefersCrossFadeTransitions: Bool?, isGrayscaleEnabled: Bool?, isDarkerSystemColorsEnabled: Bool?, isMonoAudioEnabled: Bool?, isShakeToUndoEnabled: Bool?, isSpeakScreenEnabled: Bool?, isSpeakSelectionEnabled: Bool?, isOnOffSwitchLabelsEnabled: Bool?) {
     self.init({ () -> bridge.std__optional_bool_ in
       if let __unwrappedValue = isReduceMotionEnabledEnabled {
         return bridge.create_std__optional_bool_(__unwrappedValue)
@@ -80,7 +80,7 @@ public extension AccessibilitySettings {
         return .init()
       }
     }(), { () -> bridge.std__optional_bool_ in
-      if let __unwrappedValue = isPrefersCrossFadeTransitionsEnabled {
+      if let __unwrappedValue = prefersCrossFadeTransitions {
         return bridge.create_std__optional_bool_(__unwrappedValue)
       } else {
         return .init()
@@ -300,14 +300,14 @@ public extension AccessibilitySettings {
     }
   }
   
-  var isPrefersCrossFadeTransitionsEnabled: Bool? {
+  var prefersCrossFadeTransitions: Bool? {
     @inline(__always)
     get {
-      return self.__isPrefersCrossFadeTransitionsEnabled.value
+      return self.__prefersCrossFadeTransitions.value
     }
     @inline(__always)
     set {
-      self.__isPrefersCrossFadeTransitionsEnabled = { () -> bridge.std__optional_bool_ in
+      self.__prefersCrossFadeTransitions = { () -> bridge.std__optional_bool_ in
         if let __unwrappedValue = newValue {
           return bridge.create_std__optional_bool_(__unwrappedValue)
         } else {

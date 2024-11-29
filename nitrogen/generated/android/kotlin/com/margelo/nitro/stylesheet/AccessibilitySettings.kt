@@ -27,7 +27,7 @@ data class AccessibilitySettings(
   val isSwitchControlEnabled: Boolean?,
   val isVideoAutoplayEnabled: Boolean?,
   val isClosedCaptioningEnabled: Boolean?,
-  val isPrefersCrossFadeTransitionsEnabled: Boolean?,
+  val prefersCrossFadeTransitions: Boolean?,
   val isGrayscaleEnabled: Boolean?,
   val isDarkerSystemColorsEnabled: Boolean?,
   val isMonoAudioEnabled: Boolean?,

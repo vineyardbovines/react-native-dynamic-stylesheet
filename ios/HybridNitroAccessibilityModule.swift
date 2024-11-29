@@ -31,7 +31,7 @@ class HybridNitroAccessibilityModule : HybridNitroAccessibilityModuleSpec {
                 isSwitchControlEnabled: try getIsSwitchControlEnabled(),
                 isVideoAutoplayEnabled: try getIsVideoAutoplayEnabled(),
                 isClosedCaptioningEnabled: try getIsClosedCaptioningEnabled(),
-                prefersCrossFadeTransitionsEnabled: try getPrefersCrossFadeTransitionsEnabled(),
+                prefersCrossFadeTransitions: try getPrefersCrossFadeTransitionsEnabled(),
                 isGrayscaleEnabled: try getIsGrayscaleEnabled(),
                 isDarkerSystemColorsEnabled: try getIsDarkerSystemColorsEnabled(),
                 isMonoAudioEnabled: try getIsMonoAudioEnabled(),

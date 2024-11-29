@@ -19,8 +19,7 @@ export function useAccessibilitySettings() {
       NitroAccessibilityModule.getIsDifferentiateWithoutColorEnabled(),
     isInvertColorsEnabled: NitroAccessibilityModule.getIsInvertColorsEnabled(),
     isShowButtonShapesEnabled: NitroAccessibilityModule.getIsShowButtonShapesEnabled(),
-    prefersCrossFadeTransitionsEnabled:
-      NitroAccessibilityModule.getPrefersCrossFadeTransitionsEnabled(),
+    prefersCrossFadeTransitions: NitroAccessibilityModule.getPrefersCrossFadeTransitionsEnabled(),
     isSpeakScreenEnabled: NitroAccessibilityModule.getIsSpeakScreenEnabled(),
     isSpeakSelectionEnabled: NitroAccessibilityModule.getIsSpeakSelectionEnabled(),
     isOnOffSwitchLabelsEnabled: NitroAccessibilityModule.getIsOnOffSwitchLabelsEnabled(),
@@ -114,7 +113,7 @@ export function useAccessibilitySettings() {
     NitroAccessibilityModule.addPrefersCrossFadeTransitionsListener((isEnabled) =>
       setSettings((prevSettings) => ({
         ...prevSettings,
-        prefersCrossFadeTransitionsEnabled: isEnabled,
+        prefersCrossFadeTransitions: isEnabled,
       }))
     );
     NitroAccessibilityModule.addSpeakScreenListener((isEnabled) =>
