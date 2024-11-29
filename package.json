@@ -48,6 +48,9 @@
   "bugs": {
     "url": "https://github.com/vineyardbovines/react-native-nitro-stylesheet/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rm -rf node_modules .tsbuildinfo dist",
     "build": "tsup",
